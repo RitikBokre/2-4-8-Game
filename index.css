@@ -1,0 +1,126 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url("https://images.unsplash.com/photo-1572916118992-5e36d71f7f5c?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+    background-size: cover;
+    background-color: #FFFFDD;
+    color: #fff;
+    font-family: 'Ysabeau Infant', 'sans-serif';
+}
+
+.container {
+    max-width: 500px;
+    margin: 0 auto;
+    user-select: none;
+}
+
+.heading-txt {
+    text-align: center;
+    padding-bottom: 20px;
+    font-size: 32px;
+}
+
+.main-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    gap: 12px;
+    border: 4px solid #6f6f6f;
+    border-radius: 10px;
+    padding: 12px;
+    width: 90vw;
+    max-width: 100%;
+    aspect-ratio: 1;
+}
+
+.item {
+    border-radius: 5px;
+    border: 1px solid #6f6f6f;
+    background: #6f6f6f url("https://media.istockphoto.com/id/1495779811/photo/grunge-white-wall-texture-for-element-and-element-design-photo-stock.jpg?s=612x612&w=0&k=20&c=kEgKVDvi3vHoyjicAS0dupezqOGDdI5HhbLPdUBXJ6c=");
+    background-size: cover;
+    font-size: 40px;
+    font-weight: 900;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    -webkit-text-stroke: #333 1px;
+}
+
+.reset-btn {
+    padding: 16px 32px;
+    border: none;
+    border-radius: 12px;
+    margin: 32px auto 0;
+    display: block;
+    font-weight: bold;
+    font-size: 23px;
+    font-family: 'Ysabeau Infant', 'sans-serif';
+}
+
+.stats {
+    display: flex;
+    justify-content: space-between;
+    font-size: 26px;
+    padding-bottom: 20px;
+    font-weight: bold;
+}
+
+.current-score,
+.highest-score {
+    font-weight: normal;
+}
+
+.over-txt {
+    padding: 16px 0;
+    text-align: center;
+    font-size: 26px;
+    font-weight: bold;
+}
+
+.hide {
+    display: none;
+}
+
+.two {
+    background: #0eefe8;
+}
+
+.four {
+    background: #ff1f13;
+}
+
+.eight {
+    background: #da4bf3;
+}
+
+.sixteen {
+    background: #eafd42;
+}
+
+.thirtytwo {
+    background: #c82697;
+}
+
+.sixtyfour {
+    background: #f19452;
+}
+
+.onehundredtwentytwo {
+    background: #2286de;
+}
+
+.twohundredfiftysix {
+    background: #de9a9a;
+}
+
+.fivehundredtweleve {
+    background: #81b260;
+}
