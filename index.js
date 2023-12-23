@@ -292,9 +292,9 @@ function updatedEmptyStack() {
     });
   });
 
-  const pushTwo = !checkArray.every(
-    (item, index) => item === emptyStack[index]
-  );
+  const pushTwo =
+    checkArray.length !== emptyStack.length ||
+    !checkArray.every((item, index) => item === emptyStack[index]);
 
   return pushTwo;
 }
