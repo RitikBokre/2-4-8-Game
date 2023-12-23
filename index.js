@@ -36,15 +36,18 @@ const initialEmptyStack = [
 
 let array = JSON.parse(JSON.stringify(initialArray));
 
-let emptyStack = JSON.parse(JSON.stringify(initialEmptyStack));
+let emptyStack = [...initialEmptyStack];
+
 const dist = 30;
 maxScoreEl.textContent = localStorage.getItem("highScore") || 0;
 let maxScore = maxScoreEl.textContent;
 
 function swipeUpdateArrayUi() {
-  updatedEmptyStack();
+  const pushTwo = updatedEmptyStack();
   renderItems();
-  setTimeout(randomIndexPushArray, 150);
+  if (pushTwo) {
+    setTimeout(randomIndexPushArray, 150);
+  }
   scoreEl.textContent = score;
   if (score > maxScore) {
     maxScore = score;
@@ -279,6 +282,7 @@ function randomIndexPushArray() {
 }
 
 function updatedEmptyStack() {
+  const checkArray = [...emptyStack];
   emptyStack = [];
   array.forEach((item, xIdx) => {
     item.forEach((citem, yIdx) => {
@@ -287,6 +291,13 @@ function updatedEmptyStack() {
       }
     });
   });
+
+  const pushTwo = !checkArray.every(
+    (item, index) => item === emptyStack[index]
+  );
+
+  console.log(checkArray, emptyStack, pushTwo);
+  return pushTwo;
 }
 
 resetBtn.addEventListener("click", reset);
@@ -307,4 +318,5 @@ function reset() {
   renderItems();
 }
 
+randomIndexPushArray(); // first 2 via initial start
 randomIndexPushArray(); // first 2 via initial start
