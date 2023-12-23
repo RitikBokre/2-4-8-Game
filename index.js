@@ -296,7 +296,6 @@ function updatedEmptyStack() {
     (item, index) => item === emptyStack[index]
   );
 
-  console.log(checkArray, emptyStack, pushTwo);
   return pushTwo;
 }
 
